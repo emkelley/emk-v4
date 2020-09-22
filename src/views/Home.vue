@@ -384,7 +384,7 @@ export default {
   },
   methods: {
     getTrackCount() {
-      const key = process.env.VUE_APP_LASTFM_API_KEY
+      const key = '2710ae783282393241f7cc6feb2a1e82'
       const user = 'emkelley'
       const builtURL = `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${user}&api_key=${key}&format=json`
 
