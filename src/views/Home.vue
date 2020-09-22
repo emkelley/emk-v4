@@ -59,13 +59,7 @@
                 >Samurai Zero</a
               >
               which a third-person arena action game set in the beautiful
-              science fantasy world of Edo. As an
-              <a
-                href="https://www.unrealengine.com/en-US/megagrants"
-                target="_blank"
-                >Epic Games Mega Grant</a
-              >
-              recipient, we are extremely excited for the future of the game.
+              science fantasy world of Edo.
               <br /><br />
               When I'm not working on that, I also run
               <a href="https://oneguy.io/">0NEGUY Cinematics</a>; a resource for
