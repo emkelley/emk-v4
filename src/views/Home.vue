@@ -58,7 +58,7 @@
               <a href="https://samuraizero.com/" target="_blank"
                 >Samurai Zero</a
               >
-              which a third-person arena action game set in the beautiful
+              which is a third-person arena action game set in the beautiful
               science fantasy world of Edo.
               <br /><br />
               When I'm not working on that, I also run
@@ -386,7 +386,7 @@ export default {
     getTrackCount() {
       const key = process.env.VUE_APP_LASTFM_API_KEY
       const user = 'emkelley'
-      const builtURL = `http://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${user}&api_key=${key}&format=json`
+      const builtURL = `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${user}&api_key=${key}&format=json`
 
       const fetchLastFM = new Promise((resolve, reject) => {
         this.axios
