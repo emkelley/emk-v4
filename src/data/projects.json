@@ -1,0 +1,53 @@
+[
+    {
+        "id": 1,
+        "title": "DENCAP Member Payment Portal",
+        "desc": "Design and development of a self-service payment portal supporting over 100,000 members.",
+        "mockup": "https://emkelley.b-cdn.net/laptop-portal.png",
+        "link": "https://pay.dencapsecure.com/",
+        "tags": [
+            "VueJS",
+            "Firebase",
+            "Stripe",
+            "Lambda"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Samurai Zero Marketing Website",
+        "desc": "Design and development of a marketing website for an upcoming multiplayer videogame, Samurai Zero.",
+        "mockup": "https://emkelley.b-cdn.net/laptop-sz.png",
+        "link": "https://samuraizero.com/",
+        "tags": [
+            "Nuxt",
+            "Firebase",
+            "AnimeJS",
+            "CDN"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Healthy Michigan Dental Marketing Site",
+        "desc": "Marketing website for an upcoming multiplayer videogame, Samurai Zero.",
+        "mockup": "https://emkelley.b-cdn.net/laptop-hmd.png",
+        "link": "https://hmidental.com/",
+        "tags": [
+            "VueJS",
+            "Firebase",
+            "Stripe",
+            "Lambda"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Bulma CSS Templates",
+        "desc": "I repo I contribute to with free, open-source website templates built with the Bulma CSS framework",
+        "mockup": "https://emkelley.b-cdn.net/laptop-bulma.png",
+        "link": "https://bulmatemplates.github.io/bulma-templates/",
+        "tags": [
+            "Bulma",
+            "SCSS",
+            "HTML"
+        ]
+    }
+]

@@ -1,24 +1,5 @@
 # emk-v4
 
-## Project setup
-```
-yarn install
-```
+## Fourth iteration of my personal website
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+[Visit my site](https://emk.dev/).
