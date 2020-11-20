@@ -1,4 +1,46 @@
-<template>
+<template
+  ><!-- --- -->
+  <!-- --- -->
+  <!-- --- -->
+  <!-- 
+
+                .:+oyyhddddhyso+:.                
+            -+yddddddddddddddddddddy+-            
+         -odddddddddddddddddddddddddddho.         
+       :yddddddddddddddddddddddddddddddddy:       
+     -yddddddddddddddddddddddddddddddddddddy.     
+    odddddddddddddddddddddddddddhysdddddddddd+    
+  `yddddddddddddddddddddhydddh/-.-yddddddddddds   
+  yddddddddddddddhyso/:--yddh:.`.sddddddddddddds  
+ odddddddhyso+/:........yddh:.`.sddddddddddddddd+ 
+.dddddddd+........:/+oyhddh:.`.sddddddddddddddddd`
+oddddddddh.``.+ydddddddddh:.`.sdddddddddddddddddd/
+yddddddddd+.`./dddddddhys:.`.sddddddddddddddddddds
+hdddddddddd-``.syso/:-....``./shdddddddddddddddddy
+yddddddddddo.``.......-/+o+-..../shdddddddddddddds
++ddddddddddd-```:osyhdddddddy+-..../shddddddddddd/
+.ddddddddddds.``-dddddddddhhdddy+-..../shdddddddd`
+ +ddddddddddd:``.odhyso+/---/shdddy+/+oyhddddddd/ 
+  ydddddddddds.``.-........-:+ohddddddddddddddds  
+  `sdddddddddd:```..-/+oyhddddddddddddddddddddo   
+    +dddddddddyosyhdddddddddddddddddddddddddd/    
+     .ydddddddddddddddddddddddddddddddddddds.     
+       :ydddddddddddddddddddddddddddddddds-       
+         .ohddddddddddddddddddddddddddh+.         
+            -+ydddddddddddddddddddds/.            
+                .:/osyhhhhhyyso/:.    
+
+                
+  Look at you being all nosey. 
+  This site was built with VueJS in a 
+  single night while severely inebriated.
+
+  Still want to hire me? Let's chat - eric@emk.dev
+
+-->
+  <!-- --- -->
+  <!-- --- -->
+  <!-- --- -->
   <section class="hero">
     <div class="hero-head">
       <div class="container">
@@ -30,16 +72,6 @@
               <div class="navbar-item">
                 <router-link to="/uses">Uses</router-link>
               </div>
-              <!-- <div class="navbar-item">
-                <p class="control">
-                  <a
-                    class="button is-primary"
-                    href="https://github.com/jgthms/bulma/releases/download/0.9.0/bulma-0.9.0.zip"
-                  >
-                    <span>Client Login</span>
-                  </a>
-                </p>
-              </div> -->
             </div>
           </div>
         </nav>
@@ -55,6 +87,7 @@
 
 <script>
 export default {
+  comments: true,
   name: 'Hero'
 }
 </script>
