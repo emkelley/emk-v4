@@ -1,46 +1,4 @@
-<template
-  ><!-- --- -->
-  <!-- --- -->
-  <!-- --- -->
-  <!-- 
-
-                .:+oyyhddddhyso+:.                
-            -+yddddddddddddddddddddy+-            
-         -odddddddddddddddddddddddddddho.         
-       :yddddddddddddddddddddddddddddddddy:       
-     -yddddddddddddddddddddddddddddddddddddy.     
-    odddddddddddddddddddddddddddhysdddddddddd+    
-  `yddddddddddddddddddddhydddh/-.-yddddddddddds   
-  yddddddddddddddhyso/:--yddh:.`.sddddddddddddds  
- odddddddhyso+/:........yddh:.`.sddddddddddddddd+ 
-.dddddddd+........:/+oyhddh:.`.sddddddddddddddddd`
-oddddddddh.``.+ydddddddddh:.`.sdddddddddddddddddd/
-yddddddddd+.`./dddddddhys:.`.sddddddddddddddddddds
-hdddddddddd-``.syso/:-....``./shdddddddddddddddddy
-yddddddddddo.``.......-/+o+-..../shdddddddddddddds
-+ddddddddddd-```:osyhdddddddy+-..../shddddddddddd/
-.ddddddddddds.``-dddddddddhhdddy+-..../shdddddddd`
- +ddddddddddd:``.odhyso+/---/shdddy+/+oyhddddddd/ 
-  ydddddddddds.``.-........-:+ohddddddddddddddds  
-  `sdddddddddd:```..-/+oyhddddddddddddddddddddo   
-    +dddddddddyosyhdddddddddddddddddddddddddd/    
-     .ydddddddddddddddddddddddddddddddddddds.     
-       :ydddddddddddddddddddddddddddddddds-       
-         .ohddddddddddddddddddddddddddh+.         
-            -+ydddddddddddddddddddds/.            
-                .:/osyhhhhhyyso/:.    
-
-                
-  Look at you being all nosey. 
-  This site was built with VueJS in a 
-  single night while severely inebriated.
-
-  Still want to hire me? Let's chat - eric@emk.dev
-
--->
-  <!-- --- -->
-  <!-- --- -->
-  <!-- --- -->
+<template>
   <section class="hero">
     <div class="hero-head">
       <div class="container">
