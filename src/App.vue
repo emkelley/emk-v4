@@ -67,7 +67,7 @@ footer {
 }
 @import '~bulma/sass/utilities/_all';
 * {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 // Set your colors
 $primary: #1a202e;
