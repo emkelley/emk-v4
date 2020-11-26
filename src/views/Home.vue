@@ -458,7 +458,7 @@ export default {
   padding-bottom: 8rem;
   font-size: 1.25rem;
   text-align: left;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   letter-spacing: 0.025rem;
   p {
     margin-top: 2rem;
@@ -473,7 +473,7 @@ export default {
   padding-top: 10rem;
   padding-bottom: 10rem;
   .project {
-    font-family: 'Nunito Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     .project--image {
       height: 460px;
       background: #f7f7f9;
@@ -519,7 +519,7 @@ export default {
   }
 }
 .contact {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   padding-top: 10rem;
   padding-bottom: 10rem;
   p {
@@ -559,7 +559,7 @@ export default {
     '. . .';
 }
 .tools {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   padding-top: 10rem;
   padding-bottom: 10rem;
   background: #1a202e;

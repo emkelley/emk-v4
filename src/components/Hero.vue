@@ -54,7 +54,7 @@ export default {
 .hero {
   background: linear-gradient(267deg, #455272 16%, #1a202e 100%);
   color: ghostwhite;
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   .title {
     color: ghostwhite;
     font-weight: 400;
