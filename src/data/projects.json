@@ -1,20 +1,20 @@
 [
     {
         "id": 1,
-        "title": "DENCAP Member Payment Portal",
-        "desc": "Design and development of a self-service payment portal supporting over 100,000 members.",
-        "mockup": "https://emkelley.b-cdn.net/laptop-portal.png",
-        "link": "https://pay.dencapsecure.com/",
+        "title": "GI Updates Marketing Site",
+        "desc": "Design and development of Gaming Illuminaughty's content creator updates homepage.",
+        "mockup": "https://emkelley.b-cdn.net/laptop-gi.png",
+        "link": "https://giupdates.tv/",
         "tags": [
             "VueJS",
             "Firebase",
-            "Stripe",
-            "Lambda"
+            "YouTube API",
+            "Twitch API"
         ]
     },
     {
         "id": 2,
-        "title": "Samurai Zero Marketing Website",
+        "title": "Samurai Zero Marketing Site",
         "desc": "Design and development of a marketing website for an upcoming multiplayer videogame, Samurai Zero.",
         "mockup": "https://emkelley.b-cdn.net/laptop-sz.png",
         "link": "https://samuraizero.com/",
