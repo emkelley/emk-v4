@@ -55,7 +55,7 @@
                   target="_blank"
                   type="is-light"
                   size="is-small"
-                  >Zotac AMP! Extreme GTX 1080ti</b-button
+                  >ROG Strix RTX 3070</b-button
                 >
                 <b-button
                   tag="a"
