@@ -12,17 +12,14 @@
                 height="28"
               />
             </router-link>
-            <div
-              class="navbar-burger burger"
-              data-target="navbarExampleTransparentExample"
-            >
+            <div class="navbar-burger burger" data-target="mobileNav">
               <span></span>
               <span></span>
               <span></span>
             </div>
           </div>
 
-          <div id="navbarExampleTransparentExample" class="navbar-menu">
+          <div id="mobileNav" class="navbar-menu">
             <div class="navbar-end">
               <div class="navbar-item">
                 <a href="https://github.com/emkelley">Open Source</a>

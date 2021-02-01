@@ -3,41 +3,51 @@
     <div class="router">
       <router-view />
     </div>
-    <footer class=" has-text-centered">
-      <p>
-        View Old Site Designs:
-        <a href="https://v3.emk.dev">V3</a>
-        <a href="https://v2.emk.dev">V2</a>
-        <a href="https://v1.emk.dev">V1</a>
-      </p>
-      <br />
-      <div class="block">
-        <a href="https://github.com/emkelley" target="_blank"
-          ><b-icon pack="fab" icon="github" size="is-large"> </b-icon
-        ></a>
-        <a href="https://codepen.com/emkelley" target="_blank"
-          ><b-icon pack="fab" icon="codepen" size="is-large"> </b-icon
-        ></a>
-        <a href="http://be.net/emkelley" target="_blank"
-          ><b-icon pack="fab" icon="behance" size="is-large"> </b-icon
-        ></a>
-        <a href="https://linkedin.com/in/ericmkelley" target="_blank"
-          ><b-icon pack="fab" icon="linkedin" size="is-large"> </b-icon
-        ></a>
-        <a href="https://twitter.com/0NEGUYY" target="_blank"
-          ><b-icon pack="fab" icon="twitter" size="is-large"> </b-icon
-        ></a>
+    <footer>
+      <div class="container">
+        <div class="level">
+          <div class="level-left">
+            <p>&copy; {{ currentYear }} Eric Kelley | MMXXI</p>
+          </div>
+          <div class="level-right">
+            <div class="level-item">
+              <div class="block">
+                <a href="https://github.com/emkelley" target="_blank">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://codepen.com/emkelley" target="_blank">
+                  <i class="fab fa-codepen"></i>
+                </a>
+                <a href="http://be.net/emkelley" target="_blank">
+                  <i class="fab fa-behance"></i>
+                </a>
+                <a href="https://linkedin.com/in/ericmkelley" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://twitter.com/0NEGUYY" target="_blank">
+                  <i class="fab fa-twitter"></i>
+                </a>
+              </div>
+            </div>
+            <div class="level-item">
+              <p>
+                &emsp;Old Sites:
+                <a href="https://v1.emk.dev">V1</a>
+                <a href="https://v2.emk.dev">V2</a>
+                <a href="https://v3.emk.dev">V3</a>
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-      <p>Eric Kelley | MMXX</p>
     </footer>
   </div>
 </template>
 <script>
 export default {
-  data() {
-    return {
-      currentYear: new Date().getFullYear()
-    }
+  setup() {
+    const currentYear = new Date().getFullYear()
+    return { currentYear }
   }
 }
 </script>
@@ -68,6 +78,9 @@ footer {
 @import '~bulma/sass/utilities/_all';
 * {
   font-family: 'Inter', sans-serif;
+}
+.hero .title {
+  color: white !important;
 }
 // Set your colors
 $primary: #1a202e;

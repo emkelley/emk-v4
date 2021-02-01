@@ -1,9 +1,6 @@
 <template>
   <div class="home">
     <Hero>
-      <br />
-      <br />
-      <br />
       <img src="@/assets/ek-long.png" alt="Logo" /> <br /><br /><br />
       <h1 class="title">
         code slinger, pixel pusher
@@ -13,25 +10,22 @@
       </p>
       <br />
       <div class="block">
-        <a href="https://github.com/emkelley" target="_blank"
-          ><b-icon pack="fab" icon="github" size="is-medium"> </b-icon
-        ></a>
-        <a href="https://codepen.com/emkelley" target="_blank"
-          ><b-icon pack="fab" icon="codepen" size="is-medium"> </b-icon
-        ></a>
-        <a href="http://be.net/emkelley" target="_blank"
-          ><b-icon pack="fab" icon="behance" size="is-medium"> </b-icon
-        ></a>
-        <a href="https://linkedin.com/in/ericmkelley" target="_blank"
-          ><b-icon pack="fab" icon="linkedin" size="is-medium"> </b-icon
-        ></a>
-        <a href="https://twitter.com/0NEGUYY" target="_blank"
-          ><b-icon pack="fab" icon="twitter" size="is-medium"> </b-icon
-        ></a>
+        <a href="https://github.com/emkelley" target="_blank">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://codepen.com/emkelley" target="_blank">
+          <i class="fab fa-codepen"></i>
+        </a>
+        <a href="http://be.net/emkelley" target="_blank">
+          <i class="fab fa-behance"></i>
+        </a>
+        <a href="https://linkedin.com/in/ericmkelley" target="_blank">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://twitter.com/0NEGUYY" target="_blank">
+          <i class="fab fa-twitter"></i>
+        </a>
       </div>
-      <br />
-      <br />
-      <br />
     </Hero>
     <section class="intro">
       <div class="container">
@@ -68,14 +62,14 @@
             <p>
               In the last month, I’ve pushed
               <a href="https://github.com/emkelley" target="_blank"
-                >41 commits</a
+                >26 commits</a
               >
               to GitHub, sent
-              <a href="https://twitter.com/0NEGUYY" target="_blank">9 tweets</a>
+              <a href="https://twitter.com/0NEGUYY" target="_blank">2 tweets</a>
               , visited 0 places, and I’ve listened to
               <a href="https://www.last.fm/user/emkelley" target="_blank"
                 >{{ Number(playcount).toLocaleString('en') }} songs</a
-              >. I am reading 1 book at the moment:
+              >. I am reading one book at the moment:
               <a
                 href="https://www.goodreads.com/book/show/29226553-dark-age"
                 target="_blank"
@@ -83,7 +77,6 @@
               >
               by Pierce Brown.
             </p>
-            <br />
           </div>
         </div>
       </div>
@@ -138,15 +131,15 @@
                     <h2 class="subtitle">
                       {{ project.title }}
                     </h2>
-                    <b-taglist>
-                      <b-tag
+                    <div class="tags">
+                      <span
+                        class="tag is-grey"
                         v-for="(tag, index) in project.tags"
                         :key="index"
-                        type="is-grey"
                       >
                         {{ tag }}
-                      </b-tag>
-                    </b-taglist>
+                      </span>
+                    </div>
                     <p>
                       {{ project.desc }}
                     </p>
@@ -265,22 +258,20 @@
                 </p>
                 <br /><br />
                 <div class="block">
-                  <b-button
-                    tag="a"
+                  <a
                     href="https://twitter.com/0NEGUYY"
-                    type="is-light"
-                    icon-left="twitter"
-                    icon-pack="fab"
+                    class="button is-primary"
                     style="margin-right: 1rem"
-                    >@0NEGUYY</b-button
                   >
-                  <b-button
-                    type="is-white"
-                    icon-right="arrow-right"
-                    icon-left="envelope"
-                    icon-pack="fas"
-                    >Fill out form</b-button
-                  >
+                    @0NEGUYY
+                  </a>
+                  <button class="button is-primary is-static">
+                    Fill out form
+                    <i
+                      class="fas fa-hand-point-right"
+                      style="margin-left: .5rem"
+                    ></i>
+                  </button>
                 </div>
               </div>
               <div class="column">
@@ -321,24 +312,12 @@
                     ></textarea>
                   </div>
                 </div>
-                <div
-                  v-if="!captchaToken"
-                  class="field is-grouped is-grouped-right"
-                >
-                  <div class="control">
-                    <small>Sorry, I get a lot of bot spam lately</small>
-                    <recaptcha ref="recaptcha" @verify="submit"></recaptcha>
-                  </div>
-                </div>
-                <div v-else class="field is-grouped is-grouped-right">
+                <div class="field is-grouped is-grouped-right">
                   <div class="control">
                     <button
                       @click="submitForm"
                       class="button is-primary"
                       :class="{ 'is-loading': loading }"
-                      :disabled="
-                        !contact.name || !contact.email || !contact.message
-                      "
                     >
                       Submit
                     </button>
@@ -354,105 +333,114 @@
 </template>
 
 <script>
-import { ToastProgrammatic as Toast } from 'buefy'
-import recaptcha from '@/components/Recaptcha'
+import { ref, reactive, onMounted } from 'vue'
 import projects from '@/data/projects.json'
 import Hero from '@/components/Hero'
+import axios from 'axios'
 export default {
-  name: 'Home',
-  data() {
-    return {
-      loading: false,
-      playcount: 0,
-      date: Date.now(),
-      projects: projects,
-      contact: {
-        name: undefined,
-        email: undefined,
-        message: undefined
-      },
-      captchaToken: undefined
-    }
-  },
-
   components: {
-    recaptcha,
     Hero
   },
-  mounted() {
-    this.getTrackCount()
-  },
-  methods: {
-    getTrackCount() {
+  setup() {
+    const loading = ref(false)
+
+    // *
+    // * Last.FM Integration
+    // *
+
+    const playcount = ref(0)
+    const getTrackCount = () => {
       const key = '2710ae783282393241f7cc6feb2a1e82'
       const user = 'emkelley'
       const builtURL = `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${user}&api_key=${key}&format=json`
-
-      const fetchLastFM = new Promise((resolve, reject) => {
-        this.axios
+      const fetch = new Promise((resolve, reject) => {
+        axios
           .get(builtURL)
           .then(response => {
             resolve(response)
           })
-          .catch(err => {
-            reject(err)
-          })
+          .catch(err => reject(err))
       })
-      fetchLastFM
+      fetch
         .then(response => {
-          this.playcount = response.data.user.playcount
+          playcount.value = response.data.user.playcount
         })
-        .catch(() => {
-          console.log('Unable to fetch playcount from Last.FM')
-        })
-    },
-    // send your recaptcha token to the server to verify it
-    submit(response) {
-      this.captchaToken = response
-    },
-    // execute the recaptcha widget
-    executeRecaptcha() {
-      this.$refs.recaptcha.execute()
-    },
-    submitForm() {
-      this.loading = true
-      this.axios
-        .post('https://submit-form.com/d1c2d75a-f7f8-440b-903d-fa10f687f6e6', {
-          name: this.contact.name,
-          email: this.contact.email,
-          message: this.contact.message,
-          timestamp: this.date.toString()
+        .catch(err => console.log(err))
+    }
+
+    // *
+    // * Contact Form
+    // *
+
+    const contact = reactive({
+      name: '',
+      email: '',
+      message: ''
+    })
+
+    function submitForm() {
+      loading.value = true
+
+      const data = contact
+      const curDate = Date.now()
+      const api = 'd1c2d75a-f7f8-440b-903d-fa10f687f6e6'
+      const endpoint = `https://submit-form.com/${api}`
+
+      if (!data.email || !data.name || !data.message) {
+        loading.value = false
+        return
+      }
+
+      axios
+        .post(endpoint, {
+          name: data.name,
+          email: data.email,
+          message: data.message,
+          timestamp: curDate.toString()
         })
         .then(() => {
-          this.loading = false
-          this.contact = {
+          loading.value = false
+          contact.value = {
             name: undefined,
             email: undefined,
             message: undefined
           }
-          Toast.open({
-            duration: 10000,
-            message: 'Message submitted successfully!',
-            type: 'is-success',
-            position: 'is-bottom-right'
-          })
+          console.log('submitted')
         })
-        .catch(response => {
-          this.loading = false
-          console.error(response)
-          Toast.open({
-            duration: 10000,
-            message: 'An error occurred submitting the message.',
-            type: 'is-danger',
-            position: 'is-bottom-right'
-          })
+        .catch(err => {
+          loading.value = false
+          console.log('error submitting')
+          console.error(err)
         })
+    }
+
+    onMounted(() => {
+      getTrackCount()
+    })
+
+    return {
+      loading,
+      playcount,
+      projects,
+      contact,
+      submitForm
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
+.hero {
+  a {
+    color: #c7dbff;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    transition: 0.25s all;
+    &:hover {
+      color: #7b88ff;
+    }
+  }
+}
 .intro {
   padding-top: 8rem;
   padding-bottom: 8rem;

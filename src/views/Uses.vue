@@ -21,12 +21,12 @@
               equipment evolves.
             </p>
             <br /><br />
-            <b-message type="is-primary">
+            <article class="messaeg is-primary">
               <small>
                 Some of the links below are affiliate links which means I might
                 get paid or rewarded if you use or purchase them.
               </small>
-            </b-message>
+            </article>
             <hr />
             <br /><br />
             <h1 class="title">Hardware</h1>
@@ -41,38 +41,38 @@
               </p>
               <br />
               <div class="buttons">
-                <b-button
+                <button
+                  class="button is-light is-small"
                   tag="a"
                   href="https://amzn.to/2RgSMsD"
                   target="_blank"
-                  type="is-light"
-                  size="is-small"
-                  >Core i7-7700K</b-button
                 >
-                <b-button
+                  Core i7-7700K
+                </button>
+                <button
+                  class="button is-light is-small"
                   tag="a"
                   href="https://amzn.to/2Fq9Mdr"
                   target="_blank"
-                  type="is-light"
-                  size="is-small"
-                  >ROG Strix RTX 3070</b-button
                 >
-                <b-button
+                  ROG Strix RTX 3070
+                </button>
+                <button
+                  class="button is-light is-small"
                   tag="a"
                   href="https://amzn.to/3k9opR3"
                   target="_blank"
-                  type="is-light"
-                  size="is-small"
-                  >32GB Ram</b-button
                 >
-                <b-button
+                  32GB Ram
+                </button>
+                <button
+                  class="button is-light is-small"
                   tag="a"
                   href="https://amzn.to/3bSQARj"
                   target="_blank"
-                  type="is-light"
-                  size="is-small"
-                  >2x 1TB Samsung 970 Evo Plus</b-button
                 >
+                  2x 1TB Samsung 970 Evo Plus
+                </button>
               </div>
             </div>
             <hr />
@@ -207,12 +207,8 @@
 <script>
 import Hero from '@/components/Hero'
 export default {
-  name: 'Uses',
   components: {
     Hero
-  },
-  data() {
-    return {}
   }
 }
 </script>
