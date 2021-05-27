@@ -1,14 +1,5 @@
 <template>
   <div>
-    <Hero>
-      <div class="columns">
-        <div class="column is-8 is-offset-2">
-          <h1 class="title">
-            Uses
-          </h1>
-        </div>
-      </div>
-    </Hero>
     <section class="uses-content">
       <div class="container">
         <div class="columns">
@@ -46,6 +37,7 @@
                   tag="a"
                   href="https://amzn.to/2RgSMsD"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Core i7-7700K
                 </button>
@@ -54,6 +46,7 @@
                   tag="a"
                   href="https://amzn.to/2Fq9Mdr"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   ROG Strix RTX 3070
                 </button>
@@ -62,6 +55,7 @@
                   tag="a"
                   href="https://amzn.to/3k9opR3"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   32GB Ram
                 </button>
@@ -70,6 +64,7 @@
                   tag="a"
                   href="https://amzn.to/3bSQARj"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   2x 1TB Samsung 970 Evo Plus
                 </button>
@@ -77,7 +72,11 @@
             </div>
             <hr />
             <div class="item">
-              <a href="https://amzn.to/33BkLcn" target="_blank">
+              <a
+                href="https://amzn.to/33BkLcn"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <strong>
                   13" MacBook Pro - 1.4GHz i5, 16GB RAM (2019)
                 </strong>
@@ -94,7 +93,11 @@
             </div>
             <hr />
             <div class="item">
-              <a href="https://amzn.to/2RlwdDc" target="_blank">
+              <a
+                href="https://amzn.to/2RlwdDc"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <strong>
                   Alienware AW3420DW 120Hz Ultrawide Curved Monitor
                 </strong>
@@ -111,7 +114,11 @@
             </div>
             <hr />
             <div class="item">
-              <a href="https://amzn.to/2FqUftM" target="_blank">
+              <a
+                href="https://amzn.to/2FqUftM"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <strong>
                   Realforce RGB Topre Mechanical Keyboard (80% layout)
                 </strong>
@@ -132,7 +139,7 @@
             <br />
             <h1 class="title">Development</h1>
             <div class="item">
-              <a href="https://vscodium.com/" target="_blank">
+              <a href="https://vscodium.com/" target="_blank" rel="noreferrer">
                 <strong>
                   VSCodium (Visual Studio Code) - Main Code Editor
                 </strong>
@@ -150,7 +157,11 @@
             </div>
             <hr />
             <div class="item">
-              <a href="https://github.com/Eugeny/terminus" target="_blank">
+              <a
+                href="https://github.com/Eugeny/terminus"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <strong>Terminus - Command Prompt Replacement</strong>
               </a>
               <br />
@@ -165,7 +176,11 @@
             </div>
             <hr />
             <div class="item">
-              <a href="https://www.gitkraken.com/" target="_blank">
+              <a
+                href="https://www.gitkraken.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <strong>GitKraken - Git Client GUI</strong>
               </a>
               <br />
@@ -183,6 +198,7 @@
               <a
                 href="https://www.mozilla.org/en-US/firefox/developer/"
                 target="_blank"
+                rel="noreferrer"
               >
                 <strong>Firefox Developer Edition - Main Web Browser</strong>
               </a>
@@ -203,14 +219,5 @@
     </section>
   </div>
 </template>
-
-<script>
-import Hero from '@/components/Hero'
-export default {
-  components: {
-    Hero
-  }
-}
-</script>
 
 <style lang="scss" scoped></style>

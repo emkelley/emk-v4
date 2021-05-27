@@ -1,326 +1,159 @@
 <template>
   <div class="home">
-    <Hero>
-      <img src="@/assets/ek-long.png" alt="Logo" /> <br /><br /><br />
-      <h1 class="title">
-        code slinger, pixel pusher
-      </h1>
-      <p>
-        sometimes you need to sweat the details
-      </p>
-      <br />
-      <div class="block">
-        <a href="https://github.com/emkelley" target="_blank">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="https://codepen.com/emkelley" target="_blank">
-          <i class="fab fa-codepen"></i>
-        </a>
-        <a href="http://be.net/emkelley" target="_blank">
-          <i class="fab fa-behance"></i>
-        </a>
-        <a href="https://linkedin.com/in/ericmkelley" target="_blank">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://twitter.com/0NEGUYY" target="_blank">
-          <i class="fab fa-twitter"></i>
-        </a>
-      </div>
-    </Hero>
     <section class="intro">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-12">
-            <p>
-              Hey there, I’m Eric Kelley. I’m a Fullstack Software Engineer and
-              Web Designer. From payment processing to network management, I
-              build powerful, elegant web applications that customers love to
-              use. Currently, I’m currently helping software development stay
-              human at
-              <a
-                href="https://dencap.com/?utm_source=erickelley&utm_medium=link&utm_campaign=portfolio"
-                target="_blank"
-                >DENCAP Dental Plans</a
-              >.
+      <!-- <nav class="navbar is-transparent ">
+        <div class="navbar-brand">
+          <router-link class="navbar-item" to="/">
+            <img
+              src="@/assets/ek-long.png"
+              alt="Eric Kelley logo"
+              width="112"
+              height="28"
+            />
+          </router-link>
+          <div class="navbar-burger burger" data-target="mobileNav">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+
+        <div id="mobileNav" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="block">
+                <a
+                  href="https://github.com/emkelley"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fab fa-github" style="margin-right: .5rem"style="margin-right: 1rem"></i>
+                </a>
+                <a
+                  href="https://codepen.com/emkelley"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fab fa-codepen" style="margin-right: .5rem"style="margin-right: 1rem"></i>
+                </a>
+                <a
+                  href="http://be.net/emkelley"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fab fa-behance" style="margin-right: .5rem"style="margin-right: 1rem"></i>
+                </a>
+                <a
+                  href="https://linkedin.com/in/ericmkelley"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fab fa-linkedin" style="margin-right: .5rem"style="margin-right: 1rem"></i>
+                </a>
+                <a
+                  href="https://twitter.com/0NEGUYY"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <i class="fab fa-twitter" style="margin-right: .5rem"style="margin-right: 1rem"></i>
+                </a>
+              </div>
+            </div>
+            <div class="navbar-item">
+              <a href="https://github.com/emkelley">Open Source</a>
+            </div>
+            <div class="navbar-item">
+              <router-link to="/uses">Uses</router-link>
+            </div>
+          </div>
+        </div>
+      </nav> -->
+      <div class="intro-wrapper">
+        <h1 class="title is-1">
+          Hey there, I’m <span class="rainbow clip-text">Eric Kelley</span>
+        </h1>
+        <h1 class="title is-4">Software Engineer & Web Designer</h1>
+        <hr class="rainbow" />
+        <div class="columns is-multiline">
+          <div class="column is-6">
+            <p style="font-size: 1.5rem">
+              From payment processing to network management, I build powerful,
+              elegant web applications that customers love to use. Currently,
+              I’m currently helping software development stay human at
+              <a href="https://dencap.com/" target="_blank" rel="noreferrer">
+                DENCAP Dental.
+              </a>
             </p>
+          </div>
+          <div class="column is-6">
             <p>
               In 2018, I co-founded
-              <a href="https://neointeractive.dev/" target="_blank"
-                >Neo Interactive</a
-              >, an independent video game studio that's currently developing
-              our debut game,
-              <a href="https://samuraizero.com/" target="_blank"
-                >Samurai Zero</a
+              <a
+                href="https://neointeractive.dev/"
+                target="_blank"
+                rel="noreferrer"
               >
-              which is a third-person arena action game set in the beautiful
-              science fantasy world of Edo.
-              <br /><br />
+                Neo Interactive</a
+              >, an independent video game studio currently developing our debut
+              title,
+              <a
+                href="https://samuraizero.com/"
+                target="_blank"
+                rel="noreferrer"
+                >Samurai Zero</a
+              >, a third-person arena hack-n-slash game set in the beautiful
+              science fantasy world of Edo. <br /><br />
               When I'm not working on that, I also run
               <a href="https://oneguy.io/">0NEGUY Cinematics</a>; a resource for
               content creators to download high-quality video game cinematics.
             </p>
-            <p>
-              In the last month, I’ve pushed
-              <a href="https://github.com/emkelley" target="_blank"
-                >26 commits</a
-              >
-              to GitHub, sent
-              <a href="https://twitter.com/0NEGUYY" target="_blank">2 tweets</a>
-              , visited 0 places, and I’ve listened to
-              <a href="https://www.last.fm/user/emkelley" target="_blank"
-                >{{ Number(playcount).toLocaleString('en') }} songs</a
-              >. I am reading one book at the moment:
-              <a
-                href="https://www.goodreads.com/book/show/29226553-dark-age"
-                target="_blank"
-                >“Dark Age”</a
-              >
-              by Pierce Brown.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="brands">
-      <div class="container">
-        <h1 class="title">Previous Clients</h1>
-        <h2 class="subtitle">
-          Some awesome people I've worked with
-        </h2>
-        <div class="level">
-          <div class="level-item">
-            <img src="@/assets/brands/ni.png" alt="Neo Interactive" />
-          </div>
-          <div class="level-item">
-            <img
-              src="@/assets/brands/dencap.png"
-              alt="Archdiocese of Detroit"
-            />
-          </div>
-          <div class="level-item">
-            <img src="@/assets/brands/hmd.png" alt="Archdiocese of Detroit" />
-          </div>
-          <div class="level-item">
-            <img src="@/assets/brands/aod.png" alt="Archdiocese of Detroit" />
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="projects">
-      <div class="container">
-        <div class="columns is-multiline">
-          <div class="column is-12">
-            <h1 class="title">Recent Projects</h1>
-            <h2 class="subtitle">
-              Some of the latest projects that I've worked on
-            </h2>
-            <br />
           </div>
           <div class="column is-12">
-            <div class="columns">
-              <div
-                v-for="project in projects"
-                :key="project.id"
-                class="column is-3"
-              >
-                <div class="project">
-                  <div class="project--image">
-                    <img :src="project.mockup" width="400px" alt="" />
-                  </div>
-                  <div class="project--meta">
-                    <h2 class="subtitle">
-                      {{ project.title }}
-                    </h2>
-                    <div class="tags">
-                      <span
-                        class="tag is-grey"
-                        v-for="(tag, index) in project.tags"
-                        :key="index"
-                      >
-                        {{ tag }}
-                      </span>
-                    </div>
-                    <p>
-                      {{ project.desc }}
-                    </p>
-                    <a
-                      :href="project.link"
-                      target="_blank"
-                      class="button is-grey is-inverted is-small "
-                      >View Project</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="tools">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-6 is-vcentered">
-            <h1 class="title">My Stack</h1>
-            <p>
-              I use other technologies as needed, but these are my go-to's.
-              These tools allow me to be flexible, creative, and ultimately make
-              developing web applications a joy to do. I've used other
-              frameworks, tools, and languages in the past, but nothing works as
-              great for me as these by themselves or even better, when combined.
-            </p>
-            <br />
-            <small>
-              <em>Want to know what tools I use daily?</em>
-            </small>
-            <small>
-              <em>
-                Check out my
-                <router-link to="/uses"><strong>Uses</strong></router-link>
-                page.</em
-              >
-            </small>
-          </div>
-          <div class="column is-6 is-vcentered">
-            <div class="tools-grid has-text-centered">
-              <div class="tool">
-                <div class="tool-ico">
-                  <img src="@/assets/tools/vue.svg" alt="" />
-                </div>
-                <br />
-                <a href="https://vuejs.org" target="_blank">VueJS</a> <br />
-                <small>Progressive javascript framework to develop SPA's</small>
-              </div>
-              <div class="tool">
-                <div class="tool-ico">
-                  <img src="@/assets/tools/nuxt.svg" alt="" />
-                </div>
-                <br />
-                <a href="https://nuxtjs.org/" target="_blank">Nuxt</a> <br />
-                <small
-                  >VueJS framework for creating server-side rendered apps</small
-                >
-              </div>
-              <div class="tool">
-                <div class="tool-ico">
-                  <img src="@/assets/tools/netlify.svg" alt="" />
-                </div>
-                <br />
-                <a href="https://netlify.com" target="_blank">Netlify</a> <br />
-                <small>Hosting and serverless backend lambda functions</small>
-              </div>
-              <div class="tool">
-                <div class="tool-ico">
-                  <img src="@/assets/tools/lambda.svg" alt="" />
-                </div>
-                <br />
-                <a href="https://aws.amazon.com/lambda/" target="_blank"
-                  >AWS Lambda</a
-                >
-                <br />
-                <small>Amazon's event-driven, serverless platform</small>
-              </div>
-              <div class="tool">
-                <div class="tool-ico">
-                  <img src="@/assets/tools/buefy.png" alt="Buefy" />
-                </div>
-                <br />
-                <a href="https://buefy.org/" target="_blank">Buefy</a> <br />
-                <small>UI component library for Vue.js based on Bulma</small>
-              </div>
-              <div class="tool">
-                <div class="tool-ico">
-                  <img src="@/assets/tools/cypress.svg" alt="" />
-                </div>
-                <br />
-                <a href="https://cypress.io" target="_blank"
-                  >Cypress Test Runner</a
-                >
-                <br />
-                <small>E2E testing framework for modern web apps</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="contact">
-      <div class="container">
-        <div class="columns">
-          <div class="column is-10 is-offset-1">
-            <div class="columns">
-              <div class="column is-6  left">
-                <h1 class="title">Let's Chat</h1>
+            <br /><br />
+            <div class="level">
+              <div class="level-left">
                 <p>
-                  Whether it's to build a completely new product, help clean up
-                  an existing one, or to throw some ideas around, go ahead and
-                  reach out.
+                  &copy; {{ currentYear }} Eric Kelley | {{ currentYearRoman }}
                 </p>
-                <br /><br />
-                <div class="block">
-                  <a
-                    href="https://twitter.com/0NEGUYY"
-                    class="button is-primary"
-                    style="margin-right: 1rem"
-                  >
-                    @0NEGUYY
-                  </a>
-                  <button class="button is-primary is-static">
-                    Fill out form
-                    <i
-                      class="fas fa-hand-point-right"
-                      style="margin-left: .5rem"
-                    ></i>
-                  </button>
-                </div>
               </div>
-              <div class="column">
-                <div class="field">
-                  <label class="label">Name</label>
-                  <div class="control">
-                    <input
-                      v-model="contact.name"
-                      class="input"
-                      required
-                      type="text"
-                      placeholder="Jon Snow"
-                    />
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label class="label">Email</label>
-                  <div class="control">
-                    <input
-                      v-model="contact.email"
-                      required
-                      class="input"
-                      type="email"
-                      placeholder="jon@houseofstark.com"
-                    />
-                  </div>
-                </div>
-
-                <div class="field">
-                  <label class="label">Message</label>
-                  <div class="control">
-                    <textarea
-                      v-model="contact.message"
-                      required
-                      class="textarea"
-                      placeholder="...'I don't want it'"
-                    ></textarea>
-                  </div>
-                </div>
-                <div class="field is-grouped is-grouped-right">
-                  <div class="control">
-                    <button
-                      @click="submitForm"
-                      class="button is-primary"
-                      :class="{ 'is-loading': loading }"
+              <div class="level-right">
+                <div class="level-item">
+                  <div class="block">
+                    <a
+                      href="https://github.com/emkelley"
+                      target="_blank"
+                      rel="noreferrer"
                     >
-                      Submit
-                    </button>
+                      <i class="fab fa-github" style="margin-right: 1rem"></i>
+                    </a>
+                    <a
+                      href="https://codepen.com/emkelley"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i class="fab fa-codepen" style="margin-right: 1rem"></i>
+                    </a>
+                    <a
+                      href="http://be.net/emkelley"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i class="fab fa-behance" style="margin-right: 1rem"></i>
+                    </a>
+                    <a
+                      href="https://linkedin.com/in/ericmkelley"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i class="fab fa-linkedin" style="margin-right: 1rem"></i>
+                    </a>
+                    <a
+                      href="https://twitter.com/0NEGUYY"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <i class="fab fa-twitter" style="margin-right: 1rem"></i>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -335,12 +168,8 @@
 <script>
 import { ref, reactive, onMounted } from 'vue'
 import projects from '@/data/projects.json'
-import Hero from '@/components/Hero'
 import axios from 'axios'
 export default {
-  components: {
-    Hero
-  },
   setup() {
     const loading = ref(false)
 
@@ -356,14 +185,14 @@ export default {
       const fetch = new Promise((resolve, reject) => {
         axios
           .get(builtURL)
-          .then(response => {
-            resolve(response)
+          .then(res => {
+            resolve(res)
           })
           .catch(err => reject(err))
       })
       fetch
-        .then(response => {
-          playcount.value = response.data.user.playcount
+        .then(res => {
+          playcount.value = res.data.user.playcount
         })
         .catch(err => console.log(err))
     }
@@ -417,23 +246,74 @@ export default {
     onMounted(() => {
       getTrackCount()
     })
+    function integer_to_roman(num) {
+      if (typeof num !== 'number') return false
 
+      var digits = String(+num).split(''),
+        key = [
+          '',
+          'C',
+          'CC',
+          'CCC',
+          'CD',
+          'D',
+          'DC',
+          'DCC',
+          'DCCC',
+          'CM',
+          '',
+          'X',
+          'XX',
+          'XXX',
+          'XL',
+          'L',
+          'LX',
+          'LXX',
+          'LXXX',
+          'XC',
+          '',
+          'I',
+          'II',
+          'III',
+          'IV',
+          'V',
+          'VI',
+          'VII',
+          'VIII',
+          'IX'
+        ],
+        roman_num = '',
+        i = 3
+      while (i--) roman_num = (key[+digits.pop() + i * 10] || '') + roman_num
+      return Array(+digits.join('') + 1).join('M') + roman_num
+    }
+    const currentYear = new Date().getFullYear()
+    const currentYearRoman = integer_to_roman(currentYear)
     return {
       loading,
       playcount,
       projects,
       contact,
-      submitForm
+      submitForm,
+      currentYear,
+      currentYearRoman
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-.hero {
+nav {
+  color: ghostwhite;
+  font-family: 'IBM Plex Sans', sans-serif;
+  .title {
+    color: ghostwhite;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+    margin-bottom: 0.5rem;
+  }
   a {
-    color: #c7dbff;
-    margin-left: 0.5rem;
+    color: rgb(199, 219, 255);
     margin-right: 0.5rem;
     transition: 0.25s all;
     &:hover {
@@ -441,30 +321,53 @@ export default {
     }
   }
 }
+.home {
+  background: linear-gradient(140deg, #bdcceb, #ffffff);
+}
 .intro {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  height: 100vh;
   font-size: 1.25rem;
   text-align: left;
-  font-family: 'Inter', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 300;
   letter-spacing: 0.025rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   p {
-    margin-top: 2rem;
+    font-size: 1.1rem;
   }
   a {
-    font-weight: bold;
+    font-weight: 400;
     color: #4d6283;
-    text-decoration: underline;
+    text-decoration: none;
+  }
+  span {
+    font-weight: 400;
+  }
+  .intro-wrapper {
+    width: 1280px;
+  }
+  .title {
+    color: ghostwhite;
+    font-weight: 200;
+  }
+  .subtitle {
+    color: #212121;
+    font-size: 1rem;
+    line-height: 160%;
   }
 }
+
 .projects {
   padding-top: 10rem;
   padding-bottom: 10rem;
   .project {
-    font-family: 'Inter', sans-serif;
+    font-family: 'IBM Plex Sans', sans-serif;
     .project--image {
       height: 460px;
-      background: #f7f7f9;
+      background: #111825;
       overflow: hidden;
       transition: all 300ms ease;
       img {
@@ -499,15 +402,20 @@ export default {
   }
 }
 .brands {
-  background: #f7f7f9;
+  background: #111825;
   padding-top: 5rem;
   padding-bottom: 5rem;
+  color: white;
+  h1.title,
+  h2.subtitle {
+    color: ghostwhite;
+  }
   img {
     width: 200px;
   }
 }
 .contact {
-  font-family: 'Inter', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   padding-top: 10rem;
   padding-bottom: 10rem;
   p {
@@ -547,7 +455,7 @@ export default {
     '. . .';
 }
 .tools {
-  font-family: 'Inter', sans-serif;
+  font-family: 'IBM Plex Sans', sans-serif;
   padding-top: 10rem;
   padding-bottom: 10rem;
   background: #1a202e;
@@ -579,5 +487,55 @@ export default {
 }
 .tool {
   align-items: end;
+}
+
+@media (prefers-color-scheme: dark) {
+  .home {
+    background: linear-gradient(140deg, #06080c, #111825);
+  }
+  .intro {
+    color: rgba(248, 248, 255, 0.678);
+    a {
+      color: #8ca3e2;
+      &:hover {
+        color: hsl(224, 80%, 62%);
+      }
+    }
+  }
+}
+.rainbow {
+  -webkit-animation: rainbow 8s ease infinite;
+  animation: rainbow 8s ease infinite;
+  background-image: linear-gradient(124deg, #ff470f, #ff3860, #b86bff, #3273dc);
+  background-size: 800% 800%;
+  &.clip-text {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 1% 80%;
+  }
+  50% {
+    background-position: 99% 20%;
+  }
+  100% {
+    background-position: 1% 80%;
+  }
+}
+
+@keyframes rainbow {
+  0% {
+    background-position: 1% 80%;
+  }
+  50% {
+    background-position: 99% 20%;
+  }
+  100% {
+    background-position: 1% 80%;
+  }
 }
 </style>
