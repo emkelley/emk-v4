@@ -348,7 +348,7 @@ nav {
   }
   .intro-wrapper {
     max-width: 1280px;
-    padding: 0rem 0.75rem;
+    padding: 5rem 1.5rem;
   }
   .title {
     color: ghostwhite;
