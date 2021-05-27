@@ -325,7 +325,7 @@ nav {
   background: linear-gradient(140deg, #bdcceb, #ffffff);
 }
 .intro {
-  height: 100vh;
+  min-height: 100vh;
   font-size: 1.25rem;
   text-align: left;
   font-family: 'IBM Plex Sans', sans-serif;
