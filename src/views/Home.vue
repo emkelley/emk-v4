@@ -348,7 +348,7 @@ nav {
   }
   .intro-wrapper {
     max-width: 1280px;
-    padding: 0rem 5rem;
+    padding: 0rem 0.75rem;
   }
   .title {
     color: ghostwhite;
@@ -359,135 +359,6 @@ nav {
     font-size: 1rem;
     line-height: 160%;
   }
-}
-
-.projects {
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  .project {
-    font-family: 'IBM Plex Sans', sans-serif;
-    .project--image {
-      height: 460px;
-      background: #111825;
-      overflow: hidden;
-      transition: all 300ms ease;
-      img {
-        width: 230%;
-        max-width: 1000px;
-        opacity: 0.5;
-        transition: all 200ms ease-in-out;
-        transform: translate(5rem);
-      }
-      &:hover {
-        background: #4d6283;
-        img {
-          opacity: 1;
-          transform: translate(-2rem);
-        }
-      }
-    }
-    .project--meta {
-      .subtitle {
-        margin-top: 1rem;
-        font-weight: 600;
-        font-size: 1.5rem;
-        font-weight: bold;
-      }
-      p {
-        font-size: 1.25rem;
-      }
-      .button {
-        margin-top: 0.75rem;
-      }
-    }
-  }
-}
-.brands {
-  background: #111825;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  color: white;
-  h1.title,
-  h2.subtitle {
-    color: ghostwhite;
-  }
-  img {
-    width: 200px;
-  }
-}
-.contact {
-  font-family: 'IBM Plex Sans', sans-serif;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  p {
-    font-size: 1.25rem;
-    font-weight: 300;
-  }
-  .content-wrapper {
-    padding: 2rem;
-    color: white;
-  }
-  .title,
-  .subtitle {
-    color: #00024a;
-  }
-
-  .subtitle {
-    letter-spacing: 0.05rem;
-  }
-  .left {
-    padding-right: 4rem;
-    text-align: left;
-    align-items: left !important;
-    .button {
-      text-align: left;
-      max-width: 200px;
-    }
-  }
-}
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas:
-    '. . .'
-    '. . .'
-    '. . .';
-}
-.tools {
-  font-family: 'IBM Plex Sans', sans-serif;
-  padding-top: 10rem;
-  padding-bottom: 10rem;
-  background: #1a202e;
-  color: ghostwhite;
-  .tools-grid {
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 20px;
-    grid-row-gap: 5rem;
-  }
-  a {
-    color: #c7dbff;
-  }
-  .title {
-    color: ghostwhite;
-  }
-  p {
-    font-size: 1.25rem;
-    font-weight: 300;
-  }
-  .tool-ico {
-    margin: auto;
-    img {
-      max-height: 60px !important;
-    }
-  }
-}
-.tool {
-  align-items: end;
 }
 
 @media (prefers-color-scheme: dark) {
