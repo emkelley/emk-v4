@@ -347,7 +347,8 @@ nav {
     font-weight: 400;
   }
   .intro-wrapper {
-    width: 1280px;
+    max-width: 1280px;
+    padding: 0rem 5rem;
   }
   .title {
     color: ghostwhite;
