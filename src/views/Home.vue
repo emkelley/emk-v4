@@ -264,7 +264,7 @@ nav {
     font-weight: 200;
   }
   .subtitle {
-    color: #212121;
+    color: #000;
     font-size: 1rem;
     line-height: 160%;
   }
