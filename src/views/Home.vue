@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home" :class="{ darkmode: darkMode }">
     <section class="intro">
       <!-- <nav class="navbar is-transparent ">
         <div class="navbar-brand">
@@ -156,6 +156,22 @@
                     </a>
                   </div>
                 </div>
+                <div
+                  class="level-item"
+                  style="margin-left: 3rem; cursor: pointer"
+                  @click="toggleDarkMode"
+                >
+                  <div class="darkmode-toggle">
+                    <div class="icons">
+                      <span v-show="darkMode"
+                        ><i class="fa-solid fa-moon-stars"></i
+                      ></span>
+                      <span v-show="!darkMode"
+                        ><i class="fa-solid fa-brightness"></i
+                      ></span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -166,137 +182,30 @@
 </template>
 
 <script>
-import { ref, reactive, onMounted } from 'vue'
-import projects from '@/data/projects.json'
-import axios from 'axios'
+import { ref } from 'vue'
+import { romanize } from '@/helpers/romanize'
+
 export default {
   setup() {
-    const loading = ref(false)
-
-    // *
-    // * Last.FM Integration
-    // *
-
-    const playcount = ref(0)
-    const getTrackCount = () => {
-      const key = '2710ae783282393241f7cc6feb2a1e82'
-      const user = 'emkelley'
-      const builtURL = `https://ws.audioscrobbler.com/2.0/?method=user.getinfo&user=${user}&api_key=${key}&format=json`
-      const fetch = new Promise((resolve, reject) => {
-        axios
-          .get(builtURL)
-          .then(res => {
-            resolve(res)
-          })
-          .catch(err => reject(err))
-      })
-      fetch
-        .then(res => {
-          playcount.value = res.data.user.playcount
-        })
-        .catch(err => console.log(err))
+    let darkMode = ref(false)
+    const setInitialTheme = () => {
+      const usrTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+      if (usrTheme) darkMode.value = true
     }
 
-    // *
-    // * Contact Form
-    // *
-
-    const contact = reactive({
-      name: '',
-      email: '',
-      message: ''
-    })
-
-    function submitForm() {
-      loading.value = true
-
-      const data = contact
-      const curDate = Date.now()
-      const api = 'd1c2d75a-f7f8-440b-903d-fa10f687f6e6'
-      const endpoint = `https://submit-form.com/${api}`
-
-      if (!data.email || !data.name || !data.message) {
-        loading.value = false
-        return
-      }
-
-      axios
-        .post(endpoint, {
-          name: data.name,
-          email: data.email,
-          message: data.message,
-          timestamp: curDate.toString()
-        })
-        .then(() => {
-          loading.value = false
-          contact.value = {
-            name: undefined,
-            email: undefined,
-            message: undefined
-          }
-          console.log('submitted')
-        })
-        .catch(err => {
-          loading.value = false
-          console.log('error submitting')
-          console.error(err)
-        })
+    const toggleDarkMode = () => {
+      darkMode.value = !darkMode.value
     }
 
-    onMounted(() => {
-      getTrackCount()
-    })
-    function integer_to_roman(num) {
-      if (typeof num !== 'number') return false
-
-      var digits = String(+num).split(''),
-        key = [
-          '',
-          'C',
-          'CC',
-          'CCC',
-          'CD',
-          'D',
-          'DC',
-          'DCC',
-          'DCCC',
-          'CM',
-          '',
-          'X',
-          'XX',
-          'XXX',
-          'XL',
-          'L',
-          'LX',
-          'LXX',
-          'LXXX',
-          'XC',
-          '',
-          'I',
-          'II',
-          'III',
-          'IV',
-          'V',
-          'VI',
-          'VII',
-          'VIII',
-          'IX'
-        ],
-        roman_num = '',
-        i = 3
-      while (i--) roman_num = (key[+digits.pop() + i * 10] || '') + roman_num
-      return Array(+digits.join('') + 1).join('M') + roman_num
-    }
     const currentYear = new Date().getFullYear()
-    const currentYearRoman = integer_to_roman(currentYear)
+    const currentYearRoman = romanize(currentYear)
+
+    setInitialTheme()
     return {
-      loading,
-      playcount,
-      projects,
-      contact,
-      submitForm,
       currentYear,
-      currentYearRoman
+      currentYearRoman,
+      toggleDarkMode,
+      darkMode
     }
   }
 }
@@ -351,7 +260,7 @@ nav {
     padding: 5rem 1.5rem;
   }
   .title {
-    color: ghostwhite;
+    color: #111825;
     font-weight: 200;
   }
   .subtitle {
@@ -361,10 +270,8 @@ nav {
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .home {
-    background: linear-gradient(140deg, #06080c, #111825);
-  }
+.home.darkmode {
+  background: linear-gradient(140deg, #06080c, #111825);
   .intro {
     color: rgba(248, 248, 255, 0.678);
     a {
@@ -372,6 +279,10 @@ nav {
       &:hover {
         color: hsl(224, 80%, 62%);
       }
+    }
+    .title,
+    .subtitle {
+      color: ghostwhite;
     }
   }
 }

@@ -1,37 +1,12 @@
 <template>
-  <div id="app">
-    <div class="router">
-      <router-view />
-    </div>
+  <div class="router">
+    <router-view />
   </div>
 </template>
-<script>
-export default {
-  setup() {
-    const currentYear = new Date().getFullYear()
 
-    return { currentYear }
-  }
-}
-</script>
 <style lang="scss">
 .router {
   min-height: 100vh;
-}
-footer {
-  background: rgb(26, 32, 46);
-  color: ghostwhite;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  a {
-    color: #c7dbff;
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
-    transition: 0.25s all;
-    &:hover {
-      color: #7b88ff;
-    }
-  }
 }
 .is-vcentered {
   display: flex !important;
